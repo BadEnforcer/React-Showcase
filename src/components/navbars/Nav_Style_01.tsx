@@ -1,8 +1,3 @@
-/*
-* Notes : 2:33 30/5/24
-* Future todo: Refactor the code to make it more readable and maintainable.
-*              Add transitions
-* */
 
 import React from 'react'
 import { IoSearchOutline } from "react-icons/io5";
