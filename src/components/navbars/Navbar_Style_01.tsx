@@ -16,42 +16,35 @@ const Navbar_Style_01:React.FC = () => {
         <nav className={'bg-[#191919]'}>
             {/*Desktop row*/}
             <div className={'hidden lg:flex grid-rows-1 mx-auto px-2'} id={'desktop-elements'}>
-                <div className={'grid grid-cols-3'}>
-                    {/* LOGO */}
-                    <div id={'logo'} className={'grid col-span-1 col-start-1 justify-start text-white pt-2 pl-5'}
-                         onClick={() => setShowMobileSearch(true)}>
-                        <PiAndroidLogo size={35} className={'my-1.5 sm:mt-1'}/>
-                    </div>
-                    {/* LOGO */}
+    <div className={'grid grid-cols-3'}>
+        {/* LOGO */}
+        <div id={'logo'} className={'grid col-span-1 col-start-1 justify-start text-white pt-2 pl-5'}
+             onClick={() => setShowMobileSearch(true)}>
+            <PiAndroidLogo size={35} className={'my-1.5 sm:mt-1'}/>
+        </div>
+        {/* LOGO */}
 
-                    <div id={'desktop-search-holder'}
-                         className={'relative col-span-1 col-start-2 text-center justify-end'}>
-                    <span id={'searchLogo'}><IoSearchOutline visibility={searchQuery === '' ? '' : 'hidden'}
-                                                         color={'gray'}
-                                                         size={19}
-                                                         className={'absolute top-1/2 left-3 left-1/3 transform -translate-x-9 -translate-y-[9px]'}/>
-                    </span>
-                        <input
-                            type={'text'} placeholder={'Start typing to search blogs.'}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            defaultValue={searchQuery}
-                            className={'bg-[#161515] border-[1px] border-[#282828]  sm:w-[200px]  lg:w-[400px] h-8 my-3 placeholder:text-center placeholder:text-sm placeholder:text-neutral-500 rounded-xl hover:placeholder:text-neutral-400 text-neutral-100 pl-5 pr-3 text-sm hover:ring-1 hover:ring-neutral-700 focus:outline-none focus:ring-1 focus:ring-neutral-700'}
-                        />
-                        {/*    Search button for Desktop  */}
-
-                        <IoSearchOutline visibility={searchQuery === '' ? 'hidden' : ''}
-                                         color={isMouseOverSearchIcon ? 'green' : 'gray'}
-                                         onMouseEnter={() => setIsMouseOverSearchIcon(true)}
-                                         onMouseLeave={() => setIsMouseOverSearchIcon(false)}
-                                         size={19}
-                                         cursor={'pointer'}
-                                         className={`absolute top-1/2 right-3 transform -translate-y-[9px] translate-x-8 transition-colors duration-500`}/>
-
-                        {/*    */}
-                    </div>
-
-                </div>
-            </div>
+        <div id={'desktop-search-holder'}
+             className={'relative col-span-1 col-start-2 text-center justify-end flex items-center'}>
+            <input
+                type={'text'} placeholder={'Start typing to search blogs.'}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                defaultValue={searchQuery}
+                className={'bg-[#161515] border-[1px] border-[#282828]  sm:w-[200px]  lg:w-[400px] h-8 my-3 placeholder:text-center placeholder:text-sm placeholder:text-neutral-500 rounded-xl hover:placeholder:text-neutral-400 text-neutral-100 pl-5 pr-3 text-sm hover:ring-1 hover:ring-neutral-700 focus:outline-none focus:ring-1 focus:ring-neutral-700 mr-2'}
+            />
+            {/*    Search button for Desktop  */}
+            <span id={'searchLogo'}>
+                <IoSearchOutline visibility={searchQuery === '' ? 'hidden' : ''}
+                                 color={isMouseOverSearchIcon ? 'green' : 'gray'}
+                                 onMouseEnter={() => setIsMouseOverSearchIcon(true)}
+                                 onMouseLeave={() => setIsMouseOverSearchIcon(false)}
+                                 size={19}
+                                 cursor={'pointer'}
+                                 className={`transition-colors duration-500`}/>
+            </span>
+        </div>
+    </div>
+</div>
             {/*Desktop row*/}
 
             {/*Mobile row*/}
@@ -78,7 +71,7 @@ const Navbar_Style_01:React.FC = () => {
                         (<>
                             <form>
                                 <div
-                                    className="fixed md:hidden inset-0 bg-black bg-opacity-50 backdrop-blur flex items-center justify-center ">
+                                    className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur flex items-center justify-center ">
                                     <div className="bg-[#191919] rounded p-4 grid w-full h-auto grid-rows-2 ">
                                         {/*Card body */}
                                         <div id={'cancel-button'} className={'grid row-span-1 justify-end'}>
@@ -97,7 +90,7 @@ const Navbar_Style_01:React.FC = () => {
                                                 type={'text'} placeholder={'Start typing to search blogs.'}
                                                 onChange={(e) => setSearchQuery(e.target.value)}
                                                 defaultValue={searchQuery}
-                                                className={'bg-[#161515] border-[1px] border-[#282828]  sm:w-[200px]  lg:w-[400px] h-8 my-3 placeholder:text-center placeholder:text-sm placeholder:text-neutral-500 rounded-xl hover:placeholder:text-neutral-400 text-neutral-100 pl-5 pr-3 text-sm hover:ring-1 hover:ring-neutral-700 focus:outline-none focus:ring-1 focus:ring-neutral-700'}
+                                                className={'bg-[#161515] border-[1px] border-[#282828]  sm:w-full h-8 my-3 placeholder:text-center placeholder:text-sm placeholder:text-neutral-500 rounded-xl hover:placeholder:text-neutral-400 text-neutral-100 pl-5 pr-3 text-sm hover:ring-1 hover:ring-neutral-700 focus:outline-none focus:ring-1 focus:ring-neutral-700'}
                                             />
                                         </div>
 
