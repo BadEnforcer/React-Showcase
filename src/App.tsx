@@ -3,13 +3,18 @@
 import './App.css'
 
 
-import Nav_Style_01 from "./components/navbars/Nav_Style_01.tsx";
+import Style_01_Display from "./pages/Style_01_Display.tsx";
+
+import {Route, Routes} from "react-router-dom";
+
 
 function App() {
 
   return (
     <>
-    <Nav_Style_01 />
+      <Routes>
+        <Route path={'/'} element={<Style_01_Display/>}/>
+      </Routes>
     </>
   )
 }
