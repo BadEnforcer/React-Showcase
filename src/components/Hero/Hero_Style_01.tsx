@@ -1,17 +1,17 @@
 import React from "react";
 
-import { GoDatabase } from "react-icons/go";
-import {TbWebhook} from "react-icons/tb";
-import {IoLogoJavascript} from "react-icons/io";
+// import { GoDatabase } from "react-icons/go";
+// import {TbWebhook} from "react-icons/tb";
+// import {IoLogoJavascript} from "react-icons/io";
 import profileImg from '../../static/img/profile_placeholder.jpg'
 import './Hero_Style_01.css'
 
 
-const activeJobStyle:string = 'bg-[#161515]'
-const inActiveJobStyle:string = 'bg-transparent'
+// const activeJobStyle:string = 'bg-[#161515]'
+// const inActiveJobStyle:string = 'bg-transparent'
 
 const Hero_Style_01: React.FC = () => {
-    const [activeJob, setActiveJob] = React.useState<number>(0)
+    // const [activeJob, setActiveJob] = React.useState<number>(0)
 
 
     return (
