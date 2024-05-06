@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { IoSearchOutline } from "react-icons/io5";
-import {PiAndroidLogo} from "react-icons/pi";
+import {PiAndroidLogo, PiDribbbleLogoLight} from "react-icons/pi";
 import { IoCloseOutline } from "react-icons/io5";
 
 
@@ -20,17 +20,21 @@ const Navbar_Style_01:React.FC = () => {
         {/* LOGO */}
         <div id={'logo'} className={'grid col-span-1 col-start-1 justify-start text-white pt-2 pl-5'}
              onClick={() => setShowMobileSearch(true)}>
-            <PiAndroidLogo size={35} className={'my-1.5 sm:mt-1'}/>
+            <PiDribbbleLogoLight size={35} className={'my-1.5 sm:mt-1'}/>
         </div>
         {/* LOGO */}
 
         <div id={'desktop-search-holder'}
              className={'relative col-span-1 col-start-2 text-center justify-end flex items-center'}>
+            <span id={'searchLogo'}><IoSearchOutline visibility={searchQuery === '' ? '' : 'hidden'}
+                                                     color={'gray'}
+                                                     size={19}
+                                                     className={'absolute top-1/2 left-1/4 transform -translate-x-6 -translate-y-[9px]'}/></span>
             <input
                 type={'text'} placeholder={'Start typing to search blogs.'}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 defaultValue={searchQuery}
-                className={'bg-[#161515] border-[1px] border-[#282828]  sm:w-[200px]  lg:w-[400px] h-8 my-3 placeholder:text-center placeholder:text-sm placeholder:text-neutral-500 rounded-xl hover:placeholder:text-neutral-400 text-neutral-100 pl-5 pr-3 text-sm hover:ring-1 hover:ring-neutral-700 focus:outline-none focus:ring-1 focus:ring-neutral-700 mr-2'}
+                className={'bg-[#161515] border-[1px] border-[#282828]  sm:w-[200px]  lg:w-[400px] h-8 my-3 placeholder:text-center placeholder:text-sm placeholder:text-[#FFFFFF] placeholder:text-opacity-50 rounded-xl hover:placeholder:text-neutral-400 text-neutral-100 pl-5 pr-3 text-sm hover:ring-1 hover:ring-neutral-700 focus:outline-none focus:ring-1 focus:ring-neutral-700 mr-2'}
             />
             {/*    Search button for Desktop  */}
             <span id={'searchLogo'}>
@@ -44,7 +48,7 @@ const Navbar_Style_01:React.FC = () => {
             </span>
         </div>
     </div>
-</div>
+            </div>
             {/*Desktop row*/}
 
             {/*Mobile row*/}

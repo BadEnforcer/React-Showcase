@@ -56,7 +56,7 @@ const NavLinks_Style_01: React.FC = () => {
             }
         })
         
-    }, [location.pathname, activeLink]);
+    }, [location.pathname]);
 
 
     return (
