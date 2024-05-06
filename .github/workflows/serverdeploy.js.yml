@@ -25,6 +25,6 @@ jobs:
           cache: 'npm'
       - name: Remove package-lock.json
         run: rm -f package-lock.json
-      - run: npm ci
+      - run: npm install
       - run: npm run build
       - run: node server.js &
