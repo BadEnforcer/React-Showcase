@@ -14,7 +14,7 @@ function App() {
     <>
       <Routes>
         <Route path={'/'} element={<Style_01_Display/>}/>
-          <Route path={'/cv'} element={<Style_01_Display/>}/>
+          <Route path={'/CV'} element={<Style_01_Display/>}/>
       </Routes>
     </>
   )
